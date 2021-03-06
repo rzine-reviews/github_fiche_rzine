@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1615063008878.000,
+    "dirty" : true,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "7D3CAB44",
+    "lastKnownWriteTime" : 1615064332,
+    "last_content_update" : 1615064430703,
+    "path" : "/mnt/9A8C6DB98C6D9115/gregoire/Rzine/tuto_github_rzine/rzine_tuto_github.Rmd",
+    "project_path" : "rzine_tuto_github.Rmd",
+    "properties" : {
+        "chunk_output_type" : "console",
+        "cursorPosition" : "269,32",
+        "scrollLine" : "265"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}
