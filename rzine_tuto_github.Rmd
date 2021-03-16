@@ -115,36 +115,36 @@ Tant que vous n'aurez rien importé dans votre dépôt, c'est cette page avec ce
 
 ## Importer des élements dans votre répertoire Github depuis votre ordinateur
 
-Pour réaliser cet import, nous allons temporairement laissé Github de côté.
-Vous avez donc réaliser en local votre fiche Rzine, et disposez d'un dossier contenant tous les différents éléments.
-L'objectif est donc d'importer facilement ce dossier (dans son intégralité) dans votre répertoire.
-Pour ce faire nous allons utilisé git et ses lignes de commande basique. 
+Pour réaliser cet import, vous allez temporairement laisser Github de côté.
+
+Vous avez donc réalisé en local votre fiche Rzine, et disposez d'un dossier contenant tous les différents éléments.
+L'objectif est donc d'importer facilement ce dossier (dans son intégralité) dans votre répertoire GitHub en utilisant Git et ses lignes de commande classiques.
 
 <div class="alert alert-warning" role="alert">
 Cette procédure fonctionne dans le cadre d'une fiche Rzine, mais fonctionne exactement de la même manière pour n'importe quel autre projet.
 </div>
 
-1- Il vous faut en premier lieu ouvrir votre terminal ou invite de commande
+1- Il vous faut en premier lieu ouvrir votre terminal ou invite de commandes
 
-C'est la façon la plus efficace d'intéragir avec Github depuis votre ordinateur. Cette interface, si on est pas habitué peut effectivement rebuté, mais l'apprentissage pour réaliser certaines opérations basiques se fait rapidement. 
-En revanche, chaque système d'exploitation possède sa propre interface en ligne de commande :
+C'est la façon la plus efficace d'interagir avec Github depuis votre ordinateur. De prime abord, l'interface d'interprétation de commandes peut rebuter les non-initiés, mais les commandes Git se maîtrisent rapidement.
 
-- Windows : l'invite de commande. Celle-ci peut être lancée en utilisant la touche Windows et en tapant Invite de commande (ou cmd) avant de sélectionner l'option dans la liste qui apparaît. 
+Chaque système d'exploitation possède sa propre interface en ligne de commandes :
 
-- MacOS : le terminal. On le trouvera dans Applications > Utilitaires.
-- Linux : Généralement, on peut lancer un terminal avec le raccourci clavier Ctrl + Alt + T. Si cela ne fonctionne pas, recherchez Terminal dans les applications ou via les outils de recherche.
+- Windows : l'invite de commandes peut être lancée en utilisant la touche Windows et en tapant Invite de commande (ou cmd) avant de sélectionner l'option dans la liste qui apparaît. 
+- MacOS : on lance un terminal depuis l'onglet Applications > Utilitaires.
+- Linux : généralement, on peut lancer un terminal avec le raccourci clavier Ctrl + Alt + T. Si cela ne fonctionne pas, recherchez Terminal dans les applications ou via les outils de recherche.
 
 <div class="alert alert-danger" role="alert">
-Attention Windows utilise certaines conventions différentes de celles choisies par Linux et MacOS, les commandes peuvent donc varier légèrement (par exemple, dans Windows, on utilisera l'anti-slash  pour indiquer un sous-répertoire alors que Linux et MacOS utiliseront "/").
+Attention : Windows utilise certaines conventions différentes de celles choisies par Linux et MacOS, les commandes peuvent donc varier légèrement (par exemple, dans Windows, on utilisera l'anti-slash "\" pour indiquer un sous-répertoire alors que Linux et MacOS utiliseront un slash "/").
 <hr>
-Attention sur Linux pour faire un copié-collé dans le terminal il faut utiliser le raccourci ctrl+shift+c pour collé et ctrl+shift+v pour collé.
+Attention : pour faire un copier-coller dans le terminal sur Linux, il faut utiliser le raccourci ctrl+shift+c pour copier et ctrl+shift+v pour coller.
 </div>
 
 Voici à quoi ressemble un terminal :
 
 <p class="center"><img src="figures/terminal.png"/> </p>
 
-2- Nous allons maintenant nous placer dans le dossier au sein duquel vous avez enregistré votre projet que vous souhaitez importer. Pour ce faire nous utiliserons cette ligne de commande
+2- Vous allez maintenant vous placer dans le dossier au sein duquel vous avez enregistré le projet que vous souhaitez importer via la ligne de commande :
 
 `cd "chemin/vers/votre/dossier"`
 
@@ -154,7 +154,7 @@ Il faudra bien sur remplacer le chemin entre "" par le chemin correspondant à v
 
 `git init`
 
-Cette commande permet d'initialiser Git dans le dossier au sein duquel vous vous trouvez, cela implique que toutes les opérations que vous réaliserez avec Git dans ce dossier seront sauvegardés.
+Cette commande permet d'initialiser Git dans le dossier au sein duquel vous vous trouvez. Cela implique que toutes les opérations que vous réaliserez avec Git dans ce dossier seront sauvegardées.
 
 <div class="alert alert-warning" role="alert">
 S'il s'agit de votre toute première connexion, vous verrez un message d'alerte s'afficher. Ce dernier vous demandera de vous authentifier, ce qui permettra de faire le lien avec votre Github et vous indiquera les lignes de commandes à utiliser :
@@ -163,50 +163,42 @@ S'il s'agit de votre toute première connexion, vous verrez un message d'alerte 
 `git config --global user.name "Votre Nom"`
 </div>
 
-4- Une fois git initialisé, il faut lui indiquer l'URL du dépôt Github au sein duquel vous souhaitez importer vos fichier et dossier.
+4- Une fois git initialisé, il faut lui indiquer l'URL du dépôt Github au sein duquel vous souhaitez importer vos fichiers et dossiers.
 
 `git remote add origin https://github.com/LeCampionG/github_fiche_rzine.git`
 
-Cette url est celle indiqué dans la barre d'adresse de votre navigateur lorsque vous êtes connecté à Github et dans votre dépôt. Elle est également indiqué dans les premières informations affichées lorsque vous avez créée votre dépôt.
+Cette url est celle indiquée dans la barre d'adresse de votre navigateur lorsque vous êtes connecté.e à Github et dans votre dépôt. Elle est également indiquée dans les premières informations affichées lorsque vous avez créé votre dépôt.
 
 <p class="center"><img src="figures/premier_info_url.png"/> </p>
 
-5- Nous indiquons maintenant ce que nous souhaitons envoyer, importer dans notre dépôt
+5- Indiquez les fichiers à téléverser dans le dépôt Github
 
-Cela se fait en plusieurs étape. D'abord spécifier les fichiers à envoyer.
+Cela se fait en plusieurs étapes. D'abord il faut spécifier les fichiers à envoyer.
 
-Pour importer l'intégralité du dossier nous utiliserons la commande :
+Les commandes suivantes permettent de préciser les éléments à importer :
 
-`git add --all`
+* `git add --all` : l'intégralité d'un dossier
+* `git add rzine_tuto_github.Rmd` : un fichier particulier
 
-<div class="alert alert-info" role="alert">
-Si vous souhaitez envoyer un fichier particulier, par exemple notre rmd nous écririons :
-`git add rzine_tuto_github.Rmd`
-</div>
+Dans un second temps, il faut réaliser un _commit_^[Le __commit__ est l'enregistrement des changements effectués sur un fichier. Il s'agit de l'"instantané", du point de sauvegarde des changements qui ont été réalisés. C'est sur le commit que repose complétement le système de contrôle de version et donc plus largement les outils comme Git et Github.], c'est-à-dire une sauvegarde à un instant "t" des différents éléments du dossier et/ou de l'état des fichiers, grâce à la commande `git commit`.
 
+La commande "-m" suivie  d"un texte entre guillemets permet de spécifier le message associé à l'étape d'enregistrement de l'instantané :
+* `git commit -m "1er import des fichiers"`
+* ou simplement `-m "un_texte"` à la suite d'une commande `git commit` 
 
-Une fois avoir précisé les éléments à transfèrer nous allons devoir réaliser un _commit_^[Le __commit__ est l'enregistrement des changements effectué sur un fichier. Il s'agit de l'"instantané", du point de sauvegarde des changement qui ont été réalisé. C'est sur le commit que repose complétement le système de contrôle de version et donc plus largement les outils comme Git et Github.]. Avec cette commande nous allons réalisé un instantané (au sens photographique) des fichiers sur lesquels nous travaillons. Il s'agit en fait d'une sauvegarde à un instant "t" des différents éléments du dossier.
+6- La dernière étape consiste à rendre tout cela visible et accessible, on parle de _pusher_^[ __Push/"Pusher"__ est le fait d'envoyer les commits (modifications réalisées) sur le dépôt et donc de les rendre visibles.] les fichiers :
 
-`git commit -m "1er import des fichiers"`
+* `git push -u origin master`, la commande `master` pointant vers l'endroit où les fichiers seront téléversés.
 
-`-m "un_texte"` permet simplement d'expliciter l'action, en l'associant à un message, une description.
+Notez que pour valider votre import, il faudra fournir votre identifiant et votre mot de passe.
 
-
-6- La dernière étape consiste à rendre tout cela visible et accessible, on parle de _pusher_^[ __Push/"Pusher"__ est le fait d'envoyer les commits (modifications réalisés) sur le dépôt est donc de les rendre visibles.] les fichiers :
-
-`git push -u origin master`
-
-`master` correspond à l'endroit où nous allons envoyé nos fichiers.
-
-Pour valider votre import, il faudra fournir votre identifiant et votre mot de passe
-
-Votre dépôt contient désormais les fichiers que vous aviez en local sur votre ordinateur.
+Une fois toutes ces étapes validées, votre dépôt GitHub contiendra les fichiers que vous aviez en local sur votre ordinateur!
 
 
 <div class="alert alert-info" role="alert">
-Il est possible de s'affranchir du code Git, et tout réaliser via Github en click. Néanmoins, cette méthode peut s'avérer très fastidieuse, l'importation se faisant fichier par fichier cela peut rapidement devenir chronophage.
+Il est possible de s'affranchir du code Git, et tout réaliser via Github en click. Néanmoins, cette méthode peut s'avérer très fastidieuse, l'importation se faisant fichier par fichier, elle peut rapidement devenir chronophage.
 <hr>
-Si intéragir avec votre terminal ou invite de commande ne vous convient pas, il existe également des interfaces graphiques pour Git qui permettent globalement la même chose, mais vous devrez malgré tout utiliser les lignes de commande avec ces applications.
+Si interagir avec votre terminal ou invite de commandes ne vous convient pas, il existe également des interfaces graphiques pour Git qui permettent globalement la même chose, mais vous devrez malgré tout utiliser les lignes de commandes avec ces applications.
 </div>
 
 # Les "Issues" Github {-}
