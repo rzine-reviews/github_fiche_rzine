@@ -35,14 +35,14 @@ opts_knit$set(width=75)
 
 ## Pourquoi utiliser Github dans le cadre de Rzine
 
-Depuis maintenant plusieurs années en SHS on entend beaucoup parler de Git, Github ou encore Gitlab, il s'agit quasiment d'un passage obligé lorsque l'on parle de traitement de la données.
+Depuis maintenant plusieurs années en SHS on entend beaucoup parler de Git, Github ou encore Gitlab, il s'agit quasiment d'un passage obligé lorsque l'on parle de traitement de la donnée.
 Ces outils ont vocation à faciliter le partage et la collaboration autour de projets.
 Les fonctionnalités proposées permettent notamment le suivi et la comparaison de version et un reviewing efficace.
 
 ## Objectif de cette fiche
 
-Si au sein de certaines disciplines, comme notamment en informatique, ce que sont Git et Github et leur fonctionnement est très clair, ça l'est souvent beaucoup moins en science humaine.
-Nous nous proposons ici d'en réaliser une présentation très succinte et présenter un pas à pas simplifier afin de faciliter la prise en main de ces outils dans le cadre spécifique du dépôt d'une fiche Rzine. Il ne s'agit en aucun cas d'aborder toutes les subtilités et la compléxité de Git.
+Si au sein de certaines disciplines, comme notamment en informatique, ce que sont Git et Github et leur fonctionnement est très clair, ça l'est souvent beaucoup moins en sciences humaines.
+Nous nous proposons ici d'en réaliser une présentation très succincte et de présenter un pas à pas simplifié afin de faciliter la prise en main de ces outils dans le cadre spécifique du dépôt d'une fiche Rzine. Il ne s'agit en aucun cas d'aborder toutes les subtilités et la compléxité de Git.
 
 R ne sera donc ici pas du tout le sujet, et aucune information sur la manière de renseigner une fiche Rzine ne sera donnée. Pour cela, rendez-vous sur la fiche : <a href="https://rzine.gitpages.huma-num.fr/add_publication/" target="_blank">__Référencer une publication sur Rzine__</a>
 
@@ -52,22 +52,24 @@ R ne sera donc ici pas du tout le sujet, et aucune information sur la manière d
 Ici quelques termes spécifiques à Git qu'il nous a semblé important d'expliciter un minimum.
 
 
-# Bréve Introduction {-}
+# Brève introduction {-}
 
 
-Git est un logiciel libre dont le premier développement date de 2005 crée par Linus Torvald (auteur du noyau Linux) dont la fonctionnalité est la gestion/contrôle de version^[La __gestion ou le conrôle de version__ renvoie à des pratiques dont l'objectif est de gérer les changement apporté à un fichier (généralement plutôt du code) au fil du temps. Par exemple dans un document word, chaque sauvegarde écrase la précédente, on peut aussi enregistrer une nouvelle version du document qui devient alors un autre fichier complétement indépendant. Dans les systèmes de contrôle de version on va conservé le même fichier mais garder trace de tous les changement réalisé, comme si on prenait et stocké une "photo", un "instantané" du fichier à chaque changement fichier].
-Git permet le stockage des fichiers mais surtout toutes les modifications effectuées dans le temps. Par ailleurs, Git a été conçus dans l'optique de permettre et faciliter la collaboration entre les individus en intégrant les apports de chacun au projet.
-Le fonctionnement de Git repose sur des lignes de commande et vous l'aurez compris il s'agit du coeur autour duquel se sont dévellopés les outils comme Github et Gitlab.
+Git est un logiciel libre dont le premier développement date de 2005. Créé par Linus Torvald (auteur du noyau Linux), sa fonctionnalité première réside dans la gestion/contrôle de version^[La __gestion ou le conrôle de version__ renvoie à des pratiques dont l'objectif est de gérer les changements apportés à un fichier (généralement plutôt du code) au fil du temps. Par exemple dans un document de traitement de texte, chaque sauvegarde écrase la précédente. On peut aussi enregistrer une nouvelle version du document qui devient alors un autre fichier complétement indépendant. Les systèmes de contrôle de version permettent quant-à-eux de garder trace de tous les changements réalisés sur un même fichier, comme si l'on prenait et stockait un "instantané" du fichier à chaque étape de modification].
 
-Github et Gitlab sont à l'origine des sites webs dont l'objectif est de venir renforcer l'aspect collaboratif de Git en proposant des fonctionnalités supplémentaires. Telles que que la gestion des tickets/issues, les releases, la documentation...
-Ils offrent également une interface graphique à Git qui permet dans une certaine mesure de s'affranchir des lignes de commande sur lesquelles repose Git.
+Git a été conçu dans l'optique de permettre et de faciliter la collaboration entre les individus en intégrant les apports de chacun au projet de façon incrémentale ou synchrone.
 
-Github et Gitlab permettent glabalment la même chose. Gitlab est une alternative open source, permettant peut être un usage plus avancé et plus poussé, alors que Github est le site ayant popularisé Git, il s'agit de la référence mondiale et regroupe plusieurs millions d'utilisateurs.
+Le fonctionnement de Git repose sur des lignes de commande et, vous l'aurez compris, il s'agit du coeur autour duquel se sont dévellopés des outils comme Github et Gitlab.
 
-# Pas à pas création dépot github {-}
+Github et Gitlab sont à l'origine des sites webs dont l'objectif est de venir renforcer l'aspect collaboratif de Git en proposant des fonctionnalités supplémentaires telles que que la gestion des tickets/issues, les publications/releases, la documentation...
+Ils offrent également une interface graphique à Git, ce qui permet de s'affranchir -dans une certaine mesure- des lignes de commande sur lesquelles repose Git.
 
-Dans le cadre de ce tutoriel, nous vous proposons de suivre pas à pas le dépot de cette fiche sur un compte github. La démarche se fera à la fois en click-bouton et à l'aide des lignes de commande.
-Cette fiche a été réalisé via R et un Rmarkdown, dans un projet R enregistré en local.
+Github et Gitlab permettent globalement la même chose. Toutefois, Gitlab est une alternative open source, qui offre des fonctionnalités plus avancées que Github, qui se positionne quant-à lui comme la référence mondiale popularisé Git et regroupe plusieurs millions d'utilisateurs.
+
+# Pas à pas pour la création d'un dépot Github {-}
+
+Dans le cadre de ce tutoriel, nous vous proposons de vous présenter "pas à pas" les étapes suivies pour le dépot de cette fiche sur un compte github. La démarche se fera à la fois en clique-bouton et à l'aide des lignes de commande.
+Cette fiche a été réalisée via R sous la forme d'un document Rmarkdown, dans un projet R enregistré en local.
 
 ## Installation de Git
 
@@ -77,9 +79,9 @@ Cela se fait très simplement quelque soit le système d'exploitation de votre m
 
 ## Création d'un compte Github
 
-Cette première étape est un passage obligé. Si ce fonctionnement peut faire, à raison, penser à un réseau social rassurez-vous les règles de la propirété intellectuelle sont très claires, et vous choisirez les projets à rendre publics ou privées, ainsi que les collaborateurs à éventuellement inviter. 
+Il s'agit d'un passage obligé. Si ce fonctionnement peut faire, à raison, penser à celui d'un réseau social, rassurez-vous, les règles de la propriété intellectuelle sont très claires, et vous choisirez les projets à rendre public ou privé, ainsi que les collaborateurs à associer à chaque dépôt. 
 
-La création d'un compte se fait de manière tout à fait classique:
+La création d'un compte se fait de manière tout à fait classique :
 
 1. Rendez-vous sur le site de <a href="https://github.com/" target="_blank">__Github__ </a>
 2. Cliquez sur sign up en haut à droite
@@ -87,11 +89,11 @@ La création d'un compte se fait de manière tout à fait classique:
 
 ## Créer un nouveau dépôt Github
 
-Une fois connecté à Github vous arrivez sur la page de votre profil. 
+Une fois connecté.e à Github, vous arrivez sur la page de votre profil. 
 
 <p class="center"><img src="figures/page_profil_01.png"/> </p>
 
-Pour créer un dépot^[Le __dépôt/répertoire/repo/repostory__ est l'espace où vous aller stocker vos fichiers. Il peut être local (le dossier au sein duquel avez enregistré votre fiche Rzine) ou en ligne (l'espace sur Github où vous allez importé vos fichiers). Vous pouvez stocker n'importe quel type de fichier au sein d'un dépôt.] rendez-vous sur la section _Repositories_ via le bandeau.
+Pour créer un dépot^[Le __dépôt/répertoire/repo/repostory__ est l'espace où vous allez stocker vos fichiers. Il peut être local (le dossier au sein duquel avez enregistré votre fiche Rzine) ou en ligne (l'espace sur Github où vous allez importer vos fichiers). Vous pouvez stocker n'importe quel type de fichier au sein d'un dépôt.] rendez-vous sur la section _Repositories_ via le bandeau.
 
 <p class="center"><img src="figures/bandeau_01.png"/> </p>
 
@@ -100,25 +102,25 @@ Cette page recence tous les répertoires associés à votre compte, si vous vene
 <p class="center"><img src="figures/page_repo_01.png"/> </p>
 
 
-C'est sur cette page à laquelle vous venez d'accéder après avoir cliqué sur _new_ que vous allez véritablement créer votre nouveau dépôts : lui donner un nom, déterminer son statut privé ou public...
+C'est sur cette page -à laquelle vous venez d'accéder après avoir cliqué sur _new_ - que vous allez véritablement créer votre nouveau dépôt : lui donner un nom, déterminer son statut privé ou public, en organiser le contenu...
 
 <p class="center"><img src="figures/new_repo_01.png"/> </p>
 
-Après avoir cliqué sur _Create repository_ vous aurez donc crée avec succès un nouveau dépôt Github. 
-Vous verrez cette nouvelle page s'afficher. Elle vous orientera vers différentes marche à suivre. Par ailleurs, cette page vous fournis en grande partie les lignes de commande et les informations que nous allons utilisé pour remplir votre répertoire.
+Après avoir cliqué sur _Create repository_ vous aurez donc créé avec succès un nouveau dépôt Github et devriez voir une nouvelle page s'afficher à l'écran, présentant les principales étapes à suivre pour l'ajout de contenu par le biais d'informations textuelles et de lignes de code.
 
 <p class="center"><img src="figures/depots_01.png"/> </p>
 
 <div class="alert alert-info" role="alert">
-Tant que vous n'aurez rien importé dans votre dépôt, c'est cette page avec ces informations succintes qui constituera la page d'acceuil de votre dépôt.
+Tant que vous n'aurez rien importé dans votre dépôt, c'est cette page avec ces informations succinctes qui constituera la page d'accueil de votre dépôt.
 </div>
 
-## Importer des élements dans votre répertoire Github depuis votre ordinateur
+## Importer des éléments dans votre répertoire Github depuis votre ordinateur
 
 Pour réaliser cet import, vous allez temporairement laisser Github de côté.
 
 Vous avez donc réalisé en local votre fiche Rzine, et disposez d'un dossier contenant tous les différents éléments.
 L'objectif est donc d'importer facilement ce dossier (dans son intégralité) dans votre répertoire GitHub en utilisant Git et ses lignes de commande classiques.
+
 
 <div class="alert alert-warning" role="alert">
 Cette procédure fonctionne dans le cadre d'une fiche Rzine, mais fonctionne exactement de la même manière pour n'importe quel autre projet.
@@ -203,26 +205,26 @@ Si interagir avec votre terminal ou invite de commandes ne vous convient pas, il
 
 # Les "Issues" Github {-}
 
-Les issues Github correspondent à un espace d'échange autour de votre projet. C'est un espace ouvert à tous si votre dépôt est public ou seleument à vous-même ou aux personnes auxquelles vous aurez donné accès dans le cas d'un dépôt privé.
+Les issues Github correspondent à un espace d'échange autour de votre projet. C'est un espace ouvert à tous si votre dépôt est public ou seulement à vous-même ou aux personnes auxquelles vous aurez donné accès dans le cas d'un dépôt privé.
 
-La plupart du temps les issues servent à faire remonter des bugs, signaler des idées de développement, d'améliorations...
+La plupart du temps, les issues servent à faire remonter des bugs, signaler des idées de développement, d'amélioration...
 
-Plus que de simple commentaires, il s'agit d'espaces d'échanges à l'image de forum. Vous pourrez répondre, commenter, ainsi que maintenir ouvert ou clôturer l'issue.
+Plus que de simples commentaires, il s'agit d'espaces d'échanges à l'image d'un forum. Vous pourrez répondre, commenter, ainsi que maintenir ouverte ou clôturer l'issue.
 
-Pour ouvrir une issue, il faut d'abord se rendre dans la section correspondante via le bandeau.
+Pour ouvrir une issue, il faut d'abord se rendre, depuis la page web, du dépôt dans la section correspondante via le bandeau.
 
 <p class="center"><img src="figures/bandeau_depot_01.png"/> </p>
 
 Cette page va recenser toutes les issues associées à votre projet.
-Pour créer et ouvrir une issue il suffit simplement de cliquer sur _New issue_.
+Pour créer et ouvrir une issue, il suffit simplement de cliquer sur _New issue_.
 
 <p class="center"><img src="figures/issue_01.png"/> </p>
 
-Vous pourrez donner un titre à votre issue, tagger une personnes, donner une étiquette... Une fois rédigé, cliquez sur _Submit new issue_.
+Vous pourrez donner un titre à votre issue, tagger une personne, donner une étiquette... Une fois rédigée, cliquez sur _Submit new issue_.
 
 <p class="center"><img src="figures/new_issue_01.png"/> </p>
 
-Pour répondre, modifier, clôturer (ou ré-ouvrir) une issue, il suffit de cliquer dessus et réaliser une de ces actions.
+Pour répondre, modifier, clôturer (ou ré-ouvrir) une issue, il suffit de cliquer dessus et réaliser une de ces actions par clic-bouton.
 
 <p class="center"><img src="figures/modif_issue.png"/> </p>
 
@@ -230,81 +232,78 @@ Pour répondre, modifier, clôturer (ou ré-ouvrir) une issue, il suffit de cliq
 
 ## Les branches
 
-Git et Github permettent de faire des branches^[Une __branche__ est une ramification indépendante de vote dépôt source. Elle permets donc de modifier en parallèle les fichiers ou la structure du dépôts sans affecter les autres branches. C'est extrêment utile d'autant qu'elles peuvent ensuite être re-fusionner.]
-Cela s'avère très utile lorsque l'on travaille à plusieurs ou que des corrections sont nécessaires.
+Git et Github permettent de faire des branches^[Une __branche__ est une ramification indépendante de votre dépôt source. Elle permet donc de modifier en parallèle les fichiers ou la structure du dépôt sans affecter les autres branches. C'est extrêment utile d'autant qu'elles peuvent ensuite être re-fusionnées.]
+Cela s'avère très utile lorsque l'on travaille à plusieurs ou que des corrections de contenu sont nécessaires.
 
 Dans Gitub, la création de branches peut se faire facilement.
-Depuis l'acceuil de votre dépôt (onglet <> code) cliquez sur le bouton encadré en rouge, dans l'image ci-dessous. Ce bouton permet entre autre de créer des branches.
+Depuis l'accueil de votre dépôt (onglet <> code) cliquez sur le bouton encadré en rouge, dans l'image ci-dessous. Ce bouton permet, entre autres choses, de créer des branches.
 
 <p class="center"><img src="figures/branche_01.png"/> </p>
 
-Un menu déroulant apparait, pour créer une branche il suffit d'écrire son nom puis de cliquer sur __Create branch__.
+Un menu déroulant apparait : pour créer une branche, il suffit d'écrire son nom puis de cliquer sur __Create branch__.
 
 <p class="center"><img src="figures/new_branche_01.png"/> </p>
 
-Cet onget vous indiquera dans quelle branche vous vous trouvez mais également de naviguer entre vos branches.
+Cet onget vous indiquera dans quelle branche vous vous trouvez et vous permettra également de naviguer entre les branches.
 
-En procédant de cette manière, les branches créee seront des copies des branches depuis lesquelles vous les avez produites. Cela suppose que s'il y a des modification à faire il faut les faire depuis Github ou supprimer un fichier et le ré-importer dans la branche. Ce n'est pas toujours le plus efficace.
+% ICI JE PENSE QUE L'ON PEUT ETRE PLUS CLAIRS
+En procédant de cette manière, les branches créées seront des copies des branches depuis lesquelles vous les avez produites. Cela suppose que s'il y a des modification à faire il faut les faire depuis Github ou supprimer un fichier et le ré-importer dans la branche. Ce n'est pas toujours le plus efficace.
 
-La même chose est possible en ligne de commande, et ceux de manière plus optimiser (même si, nous aborderons pas ici toute la compléxité et les possibilités de la création de branche avec les fonctions Git).
+La même chose est possible en ligne de commande, et, ce, de manière plus optimisée (même si, nous n'aborderons pas ici toute la complexité et les possibilités de la création de branches avec les fonctions Git).
 
-Pour faciliter la compréhension du principe prenons l'exemple de notre fiche Rzine.
-Nous avons déposer dans notre dépôt Github une première version de nos travaux. Nous souhaitons la faire relire par un collègue, ou y apporter nous même des modifications sans toutefois écraser notre première version.
-Nous allons donc opérer les différentes modifications en local sur notre ordinateur. Une fois satisfait, nous allons créer une branche au sein de laquelle nous allons importé nos fichiers modifiés sans écrasé nos premiers travaux. Le très grand intérêt à cela c'est que nous pourrons par la suite comparer les deux branches et éventuelement les fusionner.
+Pour faciliter la compréhension du principe prenons l'exemple de cette fiche Rzine.
+Nous avons déposé dans un dépôt Github une première version de nos travaux. Nous souhaitons la faire relire par un collègue, ou y apporter nous-même des modifications sans toutefois écraser la première version.
+Nous allons donc opérer les différentes modifications en local sur notre ordinateur. Une fois satisfaits, nous allons créer une branche au sein de laquelle nous allons importer les fichiers modifiés sans écraser les premiers travaux. Le très grand intérêt à cela c'est que nous pourrons par la suite comparer les deux branches et éventuellement les fusionner.
 
-Commencez par vous placer dans le bon répertoire. Nous retournous dans notre dossier :
+Commencez par vous placer dans le bon répertoire (ici le dossier tuto_github localisé dans le répertoire Rzine appartenant lui-même au répertoire gregoire et ainsi de suite) :
 
 `cd "/mnt/9A8C6DB98C6D9115/gregoire/Rzine/tuto_github"`
 
 
-Pour créer une nouvelle branche il suffit de d'écrire :
+Pour créer une nouvelle branche (que nous choisissons ici d'appeler "correction"), il suffit d'écrire :
 
 `git checkout -b correction`
 
-Nous avons donc ici créée et basculé vers une nouvelle branche appelée correction.
+Notons que le répertoire actif bascule alors automatiquement vers la branche nouvellement créée.
+Il est alors possible d'importer un fichier ou un dossier dans cette nouvelle branche, en suivante la procédure utilisée en amont pour la branche principale : 
 
-Et nous pouvons, de la même manière que nous l'avons fait pour la branche principale de notre dépôt, importer un fichier ou des dossiers dans cette branche nouvellement créée.
+* `git add rzine_tuto_github.Rmd`, pour l'import d'un fichier unique
+* `git add --all`, pour l'import d'un dossier et de l'ensemble des éléments qu'il contient
 
+% je ne comprends pas ce que tu voulais dire ici :
 Attention, il est nécessaire d'indiquer à Git quel fichiers ont été retravaillés
-
-`git add rzine_tuto_github.Rmd`
-
-<div class="alert alert-info" role="alert">
-Pour importer tous les éléments du dossier dans lequel nous nous trouvons :
-`git add --all`
-</div>
 
 La commande `git status` peut être très pratique pour avoir un aperçu des fichiers qui ont subi des modifications.
 
-Comme précédemment, il faut réaliser un commit, qui permetra notamment de voir et prendre en compte toutes les modifiations qui ont été faites
+Comme précédemment, il faut réaliser un commit, qui permettra notamment de voir et prendre en compte toutes les modifications réalisées sur le fichier :
 
-`git commit -m 'fichier sur lequel réaliser modifications'`
+`git commit -m 'fichier sur lequel réaliser les modifications'`
 
-Et enfin, on envoit effectivement sur notre branche de notre dépôt :
+Les changements réalisés sur la branche annexe "correction", s'ils sont validés, peuvent être renvoyés du répertoire local vers une branche du dépôt GitHub (ici, la branche d'origine) :
 
 `git push origin correction`
 
-Pour retourner sur une autre branche, par exemple la branche master
+Notons, enfin, qu'il est aisé de naviguer d'une branche à l'autre grâce à la commande checkout. Ici, on cherche par exemple à retourner sur la branche master, qui correspond au dernier embranchement dans lequel un commit a été effectué :
 
 `git checkout master`
 
 
-
 ## Pull requests
 
-Avec la création de branches vous pouvez modifier comme vous le souhaitez un fichier tout en le conservant intact dans une autre branche.
-Cependant, une fois les corrections, les modifications... terminées il peut être utile de comparer les différents élément et fusionner les fichiers modifiés.
-On peut alors réaliser une pull requests.
+Avec la création de branches, vous pouvez donc modifier comme vous le souhaitez un fichier tout en le conservant intact dans une autre branche.
 
-Github propose une interface graphique intéressante pour réaliser cette opération (elle est bien évidemment aussi faisable en ligne de commande). Pour se faire utilisez le bandeau et rendez-vous dans la section _Pull requests_.
+Une fois les corrections, les modifications... terminées, il peut être utile de comparer les différents éléments et fusionner les fichiers modifiés.
+On peut alors réaliser un pull request (qui recherche les modifications faites dans les répertoires qui se raccrochent à un dépôt et les fusionne). 
+
+Github propose une interface graphique intéressante pour réaliser cette opération (elle est bien évidemment aussi faisable en ligne de commande). Pour ce faire, utilisez le bandeau et cliquez sur le bouton _Pull requests_.
 
 <p class="center"><img src="figures/bandeau_pullrequests_01.png"/> </p>
 
 <div class="alert alert-warning" role="alert">
-Pour réaliser une pull request il faut au moins une autre branche à fusionner, et que les deux branches aient au moin sun élément dissemblable.
+Pour réaliser un pull request, il faut au moins une autre branche à fusionner, et que les deux branches aient au moins un élément dissemblable.
 </div>
 
-Cliquez sur _New pull request_ pour lancer une nouvelle comparaison:
+Cliquez sur _New pull request_ pour lancer une nouvelle comparaison :
 
 <p class="center"><img src="figures/newpullrequest_01.png"/> </p>
 
@@ -312,7 +311,7 @@ Il faut désormais choisir les deux branches à comparer :
 
 <p class="center"><img src="figures/branche_pullrequest_01.png"/> </p>
 
-Une fois fait, vous verrez les différences éventuelles entre vos deux branches : les modifications des fichiers similaires, les fichiers présents dans la 2ème branche mais pas la première...
+Une fois le pull réalisé, vous verrez les différences éventuelles entre vos deux branches : les modifications des fichiers similaires, les fichiers présents dans la 2ème branche mais pas la première...
 
 <p class="center"><img src="figures/diff_pullrequest_01.png"/> </p>
 
@@ -328,19 +327,24 @@ Vous avez donc fait une demande qui apparaitra dans votre section _Pull requests
 
 <p class="center"><img src="figures/accept_pullrequest.png"/> </p>
 
-Vous pouvez echanger de la manière qu'avec les issues, mais surtout visualiser les ce qui sera fusionner.
-Si cela vous convient vous pouvez accepter les modifications vous pouvez cliquer sur _Merge pull request_ ou au contraire refuser et cliquer sur _Close pull request_.
+% pas sûre de comprendre ce que tu voulais dire dans la deuxième partie de la phrase?
+Vous pouvez échanger des pull request de la même manière qu'avec les issues, avec l'avantage que les pull requests permettent de visualiser ce qui sera fusionné.
+
+Si cela vous convient, vous pouvez accepter les modifications en cliquant sur _Merge pull request_.
 
 <p class="center"><img src="figures/accept_pullrequest_01.png"/> </p>
 
-Les deux branches seront alors fusionner.
+Les deux branches sont alors fusionnées.
+
+Il est également possible de refuser un pull request (et donc d'ignorer les modifications de fichiers associées) en cliquant sur _Close pull request_
+
 
 
 # Liste non exhaustive des commandes Git pouvant être utiles {-}
 
-`git init` : Initialise un nouveau dépôt Git. S'est seulement après avoir entré cette commande que vous pourrez commencer à travailler avec Git.
+`git init` : Initialise un nouveau dépôt Git. C'est seulement après avoir entré cette commande que vous pourrez commencer à travailler avec Git.
 
-`git config` : raccourci de “configurer,” cette commande est particulièrement utile quand vous paramétrez Git pour la première fois.
+`git config` : Raccourci de "configurer", cette commande est particulièrement utile quand vous paramétrez Git pour la première fois.
 
 `git help` : Permet d'afficher les 21 commandes les plus courantes de Git. Vous pouvez aussi être plus spécifique et saisir par exemple `git help init` ou tout autre terme pour voir comment utiliser et configurer une commande spécifique Git.
 
@@ -348,7 +352,7 @@ Les deux branches seront alors fusionner.
 
 `git add` : Cette commande n’ajoute pas de nouveaux fichiers dans votre dépôt. Elle "porte" de nouveaux fichiers à l’attention de Git. Après avoir ajouté des fichiers, ils sont inclus dans les « instantanés » du dépôt Git.
 
-`git commit` : Une des commandes les plus importante de Git. Après avoir effectué toute sorte de modification, vous entrez ça afin de prendre un “instantané” du dépôt. Instantané au sens de photgraphie et donc de sauvegarde.
+`git commit` : Une des commandes les plus importante de Git. Après avoir effectué toute sorte de modifications, elle permet de prendre un “instantané” du dépôt (instantané au sens de photographie et donc de sauvegarde).
 
 `git push` : Si vous travaillez sur votre ordinateur local, et voulez que vos commits soient visibles aussi en ligne sur Github, vous "push"ez les modifications vers Github avec cette commande. Se sont les fichiers portés à l'attention de Git avec `git add` qui seront "push"ez
 
